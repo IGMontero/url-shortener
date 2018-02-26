@@ -7,24 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
   </head>
   <body>
+    <div id ="user-stories">
+      <ol>
+        <span>User Stories:</span>
+        <li>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</li>
+        <li>If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</li>
+        <li>When I visit that shortened URL, it will redirect me to my original link.</li>
+      </ol>
+    </div>
     <div id="main-container">
       <h1>
-        URL SHORTENER
+        URL-SHORTENER
       </h1>
       <input type = "text" placeholder="Put an URL to shorten" id="url-field">
-      <button id="shortener">
+      <a id="shortener">
         Shorten
-      </button>
+      </a>
       <div id = "response">
-        <a id="long-url"></a>
-        <a id="short-url"></a>
         <p id="error-message"></p>
+        <div id = "url-response">
+        <label class="url-label" for="long-url">Long URL:</label>
+        <a id="long-url"></a>
+        <br>
+        <label class="url-label" for="short-url">Short URL:</label>
+        <a id="short-url"></a>
+        </div>
       </div>
   </div>
   </body>

@@ -77,9 +77,6 @@ app.post('/api/shorten',function(req,res){
   })
 })
 
-app.get("/:raw_url",function(req,res){
-  
-})
 
 //If the passed code was in the database, redirect the user to its link , else send an error message as an object.
 app.get("/:encoded_url",function(req,res){
